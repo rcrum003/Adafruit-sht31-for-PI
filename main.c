@@ -87,12 +87,12 @@ void printtempandhumidity(int file)
   int rtn = gettempandhumidity(file, &tempC, &humid);
   
   if ( rtn != SHT31_OK && rtn != SHT31_CRC_CHECK_FAILED) {
-    printf("ERROR:- Get temp/humidity failed\n!");
+    printf("ERROR - Get temp/humidity failed\n!");
     return;
   }
     
   if ( rtn == SHT31_CRC_CHECK_FAILED) {
-    printf("WARNING:- Get status CRC check failed, don't trust results\n");
+    printf("Error - Get status CRC check failed, don't trust results\n");
   }
     
   if ( rtn == SHT31_OK || rtn == SHT31_CRC_CHECK_FAILED) {
