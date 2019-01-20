@@ -97,8 +97,8 @@ void printtempandhumidity(int file)
     
   if ( rtn == SHT31_OK || rtn == SHT31_CRC_CHECK_FAILED) {
     tempF =  tempC * 9 / 5 + 32;
-    printf("Temperature %.2fc - %.2ff\n",tempC,tempF);
-    printf("Humidity %.2f%%\n",humid);
+    printf("Temperature: %.2f\n",tempF);
+    printf("Humidity: %.2f\n",humid);
   }
 }
 
